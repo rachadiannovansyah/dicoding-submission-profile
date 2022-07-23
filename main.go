@@ -6,6 +6,16 @@ import (
 	"net/http"
 )
 
+// func ReadStaticAsset(w http.ResponseWriter, r *http.Request) {
+// 	data, err := ioutil.ReadFile("static/")
+// 	if err != nil {
+// 		http.Error(w, "Couldn't read file", http.StatusInternalServerError)
+// 		return
+// 	}
+// 	w.Header().Set("Content-Type", "application/javascript; charset=utf-8")
+// 	w.Write(data)
+// }
+
 func main() {
 	fmt.Println("Now Listening on 8080")
 	http.HandleFunc("/", serveFiles)
